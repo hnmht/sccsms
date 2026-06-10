@@ -1,0 +1,9 @@
+{
+  "name": "sccsmsmob",
+  "displayName": "Sea&cloud Construction Site Management System Moblie",
+  "appVersion":"1.0.0",
+  "dbName":"seacloud.db",
+  "author":"Haitao Meng",
+  "backendName":"Sea&Cloud Construction Site Management System Server",
+  "fileMaxSize":20480
+}

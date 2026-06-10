@@ -1,0 +1,1 @@
+export const VoucherStatus = ["free", "confirmed", "executing", "completed"];
