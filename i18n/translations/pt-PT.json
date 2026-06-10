@@ -1,0 +1,1047 @@
+{
+    "language": "pt-PT",
+    "messages": [
+        {
+            "key": "CodeSuccess",
+            "type": "string",
+            "message": "Sucesso."
+        },
+        {
+            "key": "CodeInvalidParm",
+            "type": "string",
+            "message": "Parâmetro de solicitação inválido."
+        },
+        {
+            "key": "CodeServerBusy",
+            "type": "string",
+            "message": "Servidor Ocupado."
+        },
+        {
+            "key": "CodeInternalError",
+            "type": "string",
+            "message": "Erro Interno do Servidor."
+        },
+        {
+            "key": "CodeInvalidToken",
+            "type": "string",
+            "message": "Credenciais de login expiraram."
+        },
+        {
+            "key": "CodeNeedLogin",
+            "type": "string",
+            "message": "Login necessário."
+        },
+        {
+            "key": "CodeClientUnknown",
+            "type": "string",
+            "message": "Cliente Desconhecido."
+        },
+        {
+            "key": "CodeClientEmpty",
+            "type": "string",
+            "message": "Tipo de cliente vazio."
+        },
+        {
+            "key": "CodeTokenDestroy",
+            "type": "string",
+            "message": "Credenciais de login foram revogadas pelo administrador."
+        },
+        {
+            "key": "CodeLoginOther",
+            "type": "string",
+            "message": "Credenciais de login inválidas, o usuário fez login em outro cliente."
+        },
+        {
+            "key": "MenuDashboard",
+            "type": "string",
+            "message": "Painel de Controle"
+        },
+        {
+            "key": "MenuCalendar",
+            "type": "string",
+            "message": "Calendário"
+        },
+        {
+            "key": "MenuMessage",
+            "type": "string",
+            "message": "Mensagem"
+        },
+        {
+            "key": "MenuAddressBook",
+            "type": "string",
+            "message": "Catálogo de Endereços"
+        },
+        {
+            "key": "MenuCSM",
+            "type": "string",
+            "message": "Gerenciamento de Canteiros de Obras"
+        },
+        {
+            "key": "MenuWO",
+            "type": "string",
+            "message": "Ordem de Serviço"
+        },
+        {
+            "key": "MenuEO",
+            "type": "string",
+            "message": "Ordem de Execução"
+        },
+        {
+            "key": "MenuEOReview",
+            "type": "string",
+            "message": "Revisão da Ordem de Execução"
+        },
+        {
+            "key": "MenuIRF",
+            "type": "string",
+            "message": "Formulário de Resolução de Problemas"
+        },
+        {
+            "key": "MenuWOStatus",
+            "type": "string",
+            "message": "Status da Ordem de Serviço"
+        },
+        {
+            "key": "MenuEOStatus",
+            "type": "string",
+            "message": "Status da Ordem de Execução"
+        },
+        {
+            "key": "MenuIRFStatus",
+            "type": "string",
+            "message": "Status do Formulário de Resolução de Problemas"
+        },
+        {
+            "key": "MenuDM",
+            "type": "string",
+            "message": "Gerenciamento de Documentos"
+        },
+        {
+            "key": "MenuDC",
+            "type": "string",
+            "message": "Categoria de Documento"
+        },
+        {
+            "key": "MenuDocumentUpload",
+            "type": "string",
+            "message": "Upload de Documento"
+        },
+        {
+            "key": "MenuDocumentFind",
+            "type": "string",
+            "message": "Localizar Documento"
+        },
+        {
+            "key": "MenuTM",
+            "type": "string",
+            "message": "Gerenciamento de Treinamento"
+        },
+        {
+            "key": "MenuTC",
+            "type": "string",
+            "message": "Curso de Treinamento"
+        },
+        {
+            "key": "MenuTR",
+            "type": "string",
+            "message": "Registro de Treinamento"
+        },
+        {
+            "key": "MenuTS",
+            "type": "string",
+            "message": "Estatísticas de Ensino"
+        },
+        {
+            "key": "MenuTPS",
+            "type": "string",
+            "message": "Estatísticas de Participação em Treinamentos"
+        },
+        {
+            "key": "MenuPPEM",
+            "type": "string",
+            "message": "Gerenciamento de EPI"
+        },
+        {
+            "key": "MenuPQ",
+            "type": "string",
+            "message": "Cota de Posição"
+        },
+        {
+            "key": "MenuPPEWizard",
+            "type": "string",
+            "message": "Assistente de Emissão"
+        },
+        {
+            "key": "MenuPPEIF",
+            "type": "string",
+            "message": "Formulário de Emissão"
+        },
+        {
+            "key": "MenuPPES",
+            "type": "string",
+            "message": "Estatísticas de Emissão"
+        },
+        {
+            "key": "MenuMD",
+            "type": "string",
+            "message": "Dados Mestre"
+        },
+        {
+            "key": "MenuDepartment",
+            "type": "string",
+            "message": "Departamento"
+        },
+        {
+            "key": "MenuPosition",
+            "type": "string",
+            "message": "Posição"
+        },
+        {
+            "key": "MenuCSC",
+            "type": "string",
+            "message": "Categoria de Canteiro de Obras"
+        },
+        {
+            "key": "MenuCSA",
+            "type": "string",
+            "message": "Canteiro de Obras"
+        },
+        {
+            "key": "MenuUDC",
+            "type": "string",
+            "message": "Categoria Definida pelo Usuário"
+        },
+        {
+            "key": "MenuUD",
+            "type": "string",
+            "message": "Definido pelo Usuário"
+        },
+        {
+            "key": "MenuEPC",
+            "type": "string",
+            "message": "Categoria de Projeto de Execução"
+        },
+        {
+            "key": "MenuEP",
+            "type": "string",
+            "message": "Projeto de Execução"
+        },
+        {
+            "key": "MenuRL",
+            "type": "string",
+            "message": "Nível de Risco"
+        },
+        {
+            "key": "MenuPPE",
+            "type": "string",
+            "message": "Equipamento de Proteção Pessoal"
+        },
+        {
+            "key": "MenuTemplate",
+            "type": "string",
+            "message": "Modelo"
+        },
+        {
+            "key": "MenuEPT",
+            "type": "string",
+            "message": "Modelo de Projeto de Execução"
+        },
+        {
+            "key": "MenuPermission",
+            "type": "string",
+            "message": "Permissão"
+        },
+        {
+            "key": "MenuRole",
+            "type": "string",
+            "message": "Função"
+        },
+        {
+            "key": "MenuUser",
+            "type": "string",
+            "message": "Usuário"
+        },
+        {
+            "key": "MenuPA",
+            "type": "string",
+            "message": "Atribuição de Permissão"
+        },
+        {
+            "key": "MenuOU",
+            "type": "string",
+            "message": "Usuário Online"
+        },
+        {
+            "key": "MenuSettings",
+            "type": "string",
+            "message": "Configurações"
+        },
+        {
+            "key": "MenuCSO",
+            "type": "string",
+            "message": "Opções do Canteiro de Obras"
+        },
+        {
+            "key": "MenuLPS",
+            "type": "string",
+            "message": "Configuração da Página de Destino"
+        },
+        {
+            "key": "MenuProfile",
+            "type": "string",
+            "message": "Perfil"
+        },
+        {
+            "key": "MenuAbout",
+            "type": "string",
+            "message": "Sobre"
+        },
+        {
+            "key": "StatusOK",
+            "type": "string",
+            "message": "sucesso."
+        },
+        {
+            "key": "StatusOtherEdit",
+            "type": "string",
+            "message": "Os dados estão sendo modificados por outro usuário."
+        },
+        {
+            "key": "StatusDataDeleted",
+            "type": "string",
+            "message": "Os dados foram excluídos."
+        },
+        {
+            "key": "StatusUserNotExist",
+            "type": "string",
+            "message": "Usuário não existe."
+        },
+        {
+            "key": "StatusInvalidPassword",
+            "type": "string",
+            "message": "Senha incorreta."
+        },
+        {
+            "key": "StatusPasswordDisaccord",
+            "type": "string",
+            "message": "As duas senhas digitadas não coincidem."
+        },
+        {
+            "key": "StatusUserDisabled",
+            "type": "string",
+            "message": "Conta de usuário desativada."
+        },
+        {
+            "key": "StatusUserLocked",
+            "type": "string",
+            "message": "Conta de usuário bloqueada."
+        },
+        {
+            "key": "StatusOverAuthorization",
+            "type": "string",
+            "message": "O número de usuários excede o limite autorizado."
+        },
+        {
+            "key": "StatusRoleNameExist",
+            "type": "string",
+            "message": "Nome da função já existe."
+        },
+        {
+            "key": "StatusRoleUserExist",
+            "type": "string",
+            "message": "A relação entre a função e o usuário já existe."
+        },
+        {
+            "key": "StatusRoleAuthExist",
+            "type": "string",
+            "message": "Esta função já teve permissões atribuídas."
+        },
+        {
+            "key": "StatusUserCodeExist",
+            "type": "string",
+            "message": "Código de usuário já existe."
+        },
+        {
+            "key": "StatusUserNameExist",
+            "type": "string",
+            "message": "Nome de usuário já existe."
+        },
+        {
+            "key": "StatusUserMobileExist",
+            "type": "string",
+            "message": "Número de telefone do usuário já existe."
+        },
+        {
+            "key": "StatusUserEmailExist",
+            "type": "string",
+            "message": "E-mail do usuário já existe."
+        },
+        {
+            "key": "StatusProfileOnlySelf",
+            "type": "string",
+            "message": "O usuário pode modificar apenas suas próprias informações."
+        },
+        {
+            "key": "StatusDeptCodeExist",
+            "type": "string",
+            "message": "Código de Departamento já existe."
+        },
+        {
+            "key": "StatusDeptFatherSelf",
+            "type": "string",
+            "message": "O departamento pai não pode ser o próprio departamento."
+        },
+        {
+            "key": "StatusDeptFatherCircle",
+            "type": "string",
+            "message": "Loop detectado na hierarquia de departamentos pai."
+        },
+        {
+            "key": "StatusDeptLowLevelExist",
+            "type": "string",
+            "message": "Sub-departamento existe."
+        },
+        {
+            "key": "StatusDeptNotExist",
+            "type": "string",
+            "message": "Departamento não existe."
+        },
+        {
+            "key": "StatusCSCNameExist",
+            "type": "string",
+            "message": "Nome da categoria do canteiro de obras existe."
+        },
+        {
+            "key": "StatusCSCFatherSelf",
+            "type": "string",
+            "message": "A categoria pai não pode ser ela mesma."
+        },
+        {
+            "key": "StatusCSCFatherCircle",
+            "type": "string",
+            "message": "Loop detectado na hierarquia de categorias pai."
+        },
+        {
+            "key": "StatusCSCLowLevelExist",
+            "type": "string",
+            "message": "Sub-categoria existe."
+        },
+        {
+            "key": "StatusCSACodeExist",
+            "type": "string",
+            "message": "Código do canteiro de obras já existe."
+        },
+        {
+            "key": "StatusUDCNameExist",
+            "type": "string",
+            "message": "Nome da categoria definida pelo usuário já existe."
+        },
+        {
+            "key": "StatusUDACodeExist",
+            "type": "string",
+            "message": "Código de dados mestre definido pelo usuário já existe."
+        },
+        {
+            "key": "StatusEPCNameExist",
+            "type": "string",
+            "message": "Nome da categoria do projeto de execução já existe."
+        },
+        {
+            "key": "StatusEPCFatherSelf",
+            "type": "string",
+            "message": "A categoria pai não pode ser ela mesma."
+        },
+        {
+            "key": "StatusEPCFatherCircle",
+            "type": "string",
+            "message": "Loop detectado na hierarquia de categorias pai."
+        },
+        {
+            "key": "StatusEPCLowLevelExist",
+            "type": "string",
+            "message": "Sub-categoria existe."
+        },
+        {
+            "key": "StatusEPCodeExist",
+            "type": "string",
+            "message": "Código do projeto de execução já existe."
+        },
+        {
+            "key": "StatusEPChangeResultType",
+            "type": "string",
+            "message": "Os itens referenciados não podem ter seu tipo de resultado modificado."
+        },
+        {
+            "key": "StatusEPTCodeExist",
+            "type": "string",
+            "message": "Código do modelo de projeto de execução já existe."
+        },
+        {
+            "key": "StatusFileOpenFailed",
+            "type": "string",
+            "message": "Falha ao abrir arquivo."
+        },
+        {
+            "key": "StatusFileUploadFailed",
+            "type": "string",
+            "message": "Falha no upload do arquivo."
+        },
+        {
+            "key": "StatusFileGetUrlFailed",
+            "type": "string",
+            "message": "Falha ao obter URL do arquivo."
+        },
+        {
+            "key": "StatusFileNotExist",
+            "type": "string",
+            "message": "Arquivo não existe."
+        },
+        {
+            "key": "StatusWOOtherEdit",
+            "type": "string",
+            "message": "A Ordem de Serviço foi modificada por outro usuário."
+        },
+        {
+            "key": "StatusEOBodyNoConfirm",
+            "type": "string",
+            "message": "Existem linhas não confirmadas no corpo da ordem de execução."
+        },
+        {
+            "key": "StatusIssueResolved",
+            "type": "string",
+            "message": "O problema foi resolvido."
+        },
+        {
+            "key": "StatusMsgOnlyReadSelf",
+            "type": "string",
+            "message": "As mensagens só podem ser lidas pelo próprio destinatário."
+        },
+        {
+            "key": "StatusRLNameExist",
+            "type": "string",
+            "message": "Nome do nível de risco já existe."
+        },
+        {
+            "key": "StatusDCNameExist",
+            "type": "string",
+            "message": "Nome da Categoria de Documento já existe."
+        },
+        {
+            "key": "StatusDCLowLevelExist",
+            "type": "string",
+            "message": "Sub-categoria existe."
+        },
+        {
+            "key": "StatusDCFatherSelf",
+            "type": "string",
+            "message": "A categoria pai não pode ser ela mesma."
+        },
+        {
+            "key": "StatusDocumentNoFile",
+            "type": "string",
+            "message": "O Documento não possui anexos."
+        },
+        {
+            "key": "StatusPositionNameExist",
+            "type": "string",
+            "message": "Nome da posição já existe."
+        },
+        {
+            "key": "StatusTCNameExist",
+            "type": "string",
+            "message": "Nome do Curso de Treinamento já existe."
+        },
+        {
+            "key": "StatusPPECodeExist",
+            "type": "string",
+            "message": "Código do Equipamento de Proteção Pessoal já existe."
+        },
+        {
+            "key": "StatusPQExist",
+            "type": "string",
+            "message": "Uma cota de posto de suprimentos de proteção trabalhista para o mesmo período já existe."
+        },
+        {
+            "key": "StatusUDUsed",
+            "type": "string",
+            "message": "Referenciado por dados mestre definidos pelo usuário."
+        },
+        {
+            "key": "StatusEPAUsed",
+            "type": "string",
+            "message": "Referenciado por dados mestre do Projeto de Execução."
+        },
+        {
+            "key": "StatusEPDefaultUsed",
+            "type": "string",
+            "message": "Referenciado pelo valor padrão do Projeto de Execução."
+        },
+        {
+            "key": "StatusEPErrorUsed",
+            "type": "string",
+            "message": "Referenciado pelo valor de erro do Projeto de Execução."
+        },
+        {
+            "key": "StatusEPTDefaultUsed",
+            "type": "string",
+            "message": "Referenciado pelos valores padrão do Modelo de Projeto de Execução."
+        },
+        {
+            "key": "StatusEPTErrorUsed",
+            "type": "string",
+            "message": "Referenciado pelos valores de erro do Modelo de Projeto de Execução."
+        },
+        {
+            "key": "StatusEPTUsed",
+            "type": "string",
+            "message": "Referenciado pelo Modelo de Projeto de Execução."
+        },
+        {
+            "key": "StatusUserUsed",
+            "type": "string",
+            "message": "Referenciado por Usuário."
+        },
+        {
+            "key": "StatusDeptLeaderUsed",
+            "type": "string",
+            "message": "Referenciado por Departamento."
+        },
+        {
+            "key": "StatusCSAUsed",
+            "type": "string",
+            "message": "Referenciado por Canteiro de Obras."
+        },
+        {
+            "key": "StatusWOUsed",
+            "type": "string",
+            "message": "Referenciado por Ordem de Serviço."
+        },
+        {
+            "key": "StatusEOUsed",
+            "type": "string",
+            "message": "Referenciado por Ordem de Execução."
+        },
+        {
+            "key": "StatusEOValueUsed",
+            "type": "string",
+            "message": "Referenciado por valores da Ordem de Execução."
+        },
+        {
+            "key": "StatusEOErrorUsed",
+            "type": "string",
+            "message": "Referenciado por valores de erro da Ordem de Execução."
+        },
+        {
+            "key": "StatusIRFUsed",
+            "type": "string",
+            "message": "Referenciado por Formulário de Resolução de Problemas."
+        },
+        {
+            "key": "StatusCSARespUsed",
+            "type": "string",
+            "message": "Referenciado pelo proprietário do Canteiro de Obras."
+        },
+        {
+            "key": "StatusWOEpUsed",
+            "type": "string",
+            "message": "Referenciado pelo executor da Ordem de Execução."
+        },
+        {
+            "key": "StatusEOEpUsed",
+            "type": "string",
+            "message": "Referenciado pelo executor principal da ordem de execução."
+        },
+        {
+            "key": "StatusEOIssueOwnerUsed",
+            "type": "string",
+            "message": "Referenciado pelo manipulador do corpo da Ordem de Execução."
+        },
+        {
+            "key": "StatusEOCommentUsed",
+            "type": "string",
+            "message": "Referenciado pelo anotador da Ordem de Execução."
+        },
+        {
+            "key": "StatusEOSendToUsed",
+            "type": "string",
+            "message": "Referenciado pelo destinatário da mensagem de anotação da Ordem de Execução."
+        },
+        {
+            "key": "StatusEOReviewUsed",
+            "type": "string",
+            "message": "Referenciado pelo revisor da Ordem de Execução."
+        },
+        {
+            "key": "StatusIRFIssueOwnerUsed",
+            "type": "string",
+            "message": "Referenciado pelo executor do Formulário de Resolução de Problemas."
+        },
+        {
+            "key": "StatusIRFFixerUsed",
+            "type": "string",
+            "message": "Referenciado pelo manipulador do Formulário de Resolução de Problemas."
+        },
+        {
+            "key": "StatusCSOUsed",
+            "type": "string",
+            "message": "Referenciado por Opções do Canteiro de Obras."
+        },
+        {
+            "key": "StatusDocumentUsed",
+            "type": "string",
+            "message": "Referenciado por Documento."
+        },
+        {
+            "key": "StatusTRUsed",
+            "type": "string",
+            "message": "Referenciado por Registro de Treinamento."
+        },
+        {
+            "key": "StatusWOCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador da Ordem de Serviço."
+        },
+        {
+            "key": "StatusWOModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor da Ordem de Serviço."
+        },
+        {
+            "key": "StatusWOConfirmUsed",
+            "type": "string",
+            "message": "Referenciado pelo confirmador da Ordem de Serviço."
+        },
+        {
+            "key": "StatusEOCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador da Ordem de Execução."
+        },
+        {
+            "key": "StatusEOModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor da Ordem de Execução."
+        },
+        {
+            "key": "StatusEOConfirmUsed",
+            "type": "string",
+            "message": "Referenciado pelo confirmador da Ordem de Execução."
+        },
+        {
+            "key": "StatusIRFCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador do Formulário de Resolução de Problemas."
+        },
+        {
+            "key": "StatusIRFModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor do Formulário de Resolução de Problemas."
+        },
+        {
+            "key": "StatusIRFConfirmUsed",
+            "type": "string",
+            "message": "Referenciado pelo confirmador do Formulário de Resolução de Problemas."
+        },
+        {
+            "key": "StatusDCCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador da Categoria de Documento."
+        },
+        {
+            "key": "StatusDCModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor da Categoria de Documento."
+        },
+        {
+            "key": "StatusDocumentCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador do Documento."
+        },
+        {
+            "key": "StatusDocumentModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor do Documento."
+        },
+        {
+            "key": "StatusTCCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador do Curso de Treinamento."
+        },
+        {
+            "key": "StatusTCModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor do Curso de Treinamento."
+        },
+        {
+            "key": "StatusTRLecturerUsed",
+            "type": "string",
+            "message": "Referenciado pelo palestrante do Registro de Treinamento."
+        },
+        {
+            "key": "StatusTRStudentUsed",
+            "type": "string",
+            "message": "Referenciado pelo estagiário do Registro de Treinamento."
+        },
+        {
+            "key": "StatusTRCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador do Registro de Treinamento."
+        },
+        {
+            "key": "StatusTRModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor do Registro de Treinamento."
+        },
+        {
+            "key": "StatusTRConfirmUsed",
+            "type": "string",
+            "message": "Referenciado pelo confirmador do Registro de Treinamento."
+        },
+        {
+            "key": "StatusPQCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador da Cota de EPI."
+        },
+        {
+            "key": "StatusPQModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor da Cota de EPI."
+        },
+        {
+            "key": "StatusPQConfirmUsed",
+            "type": "string",
+            "message": "Referenciado pelo confirmador da Cota de EPI."
+        },
+        {
+            "key": "StatusPPEIFCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador do Formulário de Emissão de EPI."
+        },
+        {
+            "key": "StatusPPEIFModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor do Formulário de Emissão de EPI."
+        },
+        {
+            "key": "StatusPPEIFConfirmUsed",
+            "type": "string",
+            "message": "Referenciado pelo confirmador do Formulário de Emissão de EPI."
+        },
+        {
+            "key": "StatusPPEIFRecipientUsed",
+            "type": "string",
+            "message": "Referenciado pelo destinatário do Formulário de Emissão de EPI."
+        },
+        {
+            "key": "StatusDeptCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador do Departamento."
+        },
+        {
+            "key": "StatusDeptModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor do Departamento."
+        },
+        {
+            "key": "StatusPositionCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador da Posição."
+        },
+        {
+            "key": "StatusPositionModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor da Posição."
+        },
+        {
+            "key": "StatusCSCCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador da Categoria de Canteiro de Obras."
+        },
+        {
+            "key": "StatusCSCModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor da Categoria de Canteiro de Obras."
+        },
+        {
+            "key": "StatusCSACreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador do Canteiro de Obras."
+        },
+        {
+            "key": "StatusCSAModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor do Canteiro de Obras."
+        },
+        {
+            "key": "StatusUDCCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador da Categoria Definida pelo Usuário."
+        },
+        {
+            "key": "StatusUDCModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor da Categoria Definida pelo Usuário."
+        },
+        {
+            "key": "StatusUDCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador Definido pelo Usuário."
+        },
+        {
+            "key": "StatusUDModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor Definido pelo Usuário."
+        },
+        {
+            "key": "StatusEPCCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador da Categoria de Projeto de Execução."
+        },
+        {
+            "key": "StatusEPCModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor da Categoria de Projeto de Execução."
+        },
+        {
+            "key": "StatusEPCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador do Projeto de Execução."
+        },
+        {
+            "key": "StatusEPModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor do Projeto de Execução."
+        },
+        {
+            "key": "StatusRLCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador do Nível de Risco."
+        },
+        {
+            "key": "StatusRLModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor do Nível de Risco."
+        },
+        {
+            "key": "StatusPPECreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador do Equipamento de Proteção Pessoal."
+        },
+        {
+            "key": "StatusPPEModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor do Equipamento de Proteção Pessoal."
+        },
+        {
+            "key": "StatusEPTCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador do Modelo de Projeto de Execução."
+        },
+        {
+            "key": "StatusEPTModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor do Modelo de Projeto de Execução."
+        },
+        {
+            "key": "StatusUserCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador do Usuário."
+        },
+        {
+            "key": "StatusUserModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor do Usuário."
+        },
+        {
+            "key": "StatusRoleCreateUsed",
+            "type": "string",
+            "message": "Referenciado pelo criador da Função."
+        },
+        {
+            "key": "StatusRoleModifyUsed",
+            "type": "string",
+            "message": "Referenciado pelo editor da Função."
+        },
+        {
+            "key": "StatusTRDeptUsed",
+            "type": "string",
+            "message": "Referenciado pelo campo de departamento do documento Registros de Treinamento."
+        },
+        {
+            "key": "StatusPPEIFDeptUsed",
+            "type": "string",
+            "message": "Referenciado pelo departamento emissor no Formulário de Emissão de EPI."
+        },
+        {
+            "key": "StatusErrorUnknown",
+            "type": "string",
+            "message": "Erro desconhecido."
+        },
+        {
+            "key": "StatusResCodeError",
+            "type": "string",
+            "message": "Erro de resposta."
+        },
+        {
+            "key": "StatusInternalError",
+            "type": "string",
+            "message": "Erro interno do servidor."
+        },
+        {
+            "key": "StatusResReject",
+            "type": "string",
+            "message": "Acesso negado pelo servidor."
+        },
+        {
+            "key": "StatusResNoData",
+            "type": "string",
+            "message": "Sem dados."
+        },
+        {
+            "key": "StatusOverRecord",
+            "type": "string",
+            "message": "O número de registros excede o limite máximo."
+        },
+        {
+            "key": "StatusVoucherNoBody",
+            "type": "string",
+            "message": "O corpo do Documento Transacional está vazio."
+        },
+        {
+            "key": "StatusVoucherNoFree",
+            "type": "string",
+            "message": "O Documento Transacional não está em estado livre."
+        },
+        {
+            "key": "StatusVoucherOnlyCreateEdit",
+            "type": "string",
+            "message": "Somente o criador do Documento Transacional pode modificar o documento."
+        },
+        {
+            "key": "StatusVoucherNoConfirm",
+            "type": "string",
+            "message": "O status do Documento Transacional não está confirmado."
+        },
+        {
+            "key": "StatusVoucherCancelConfirmSelf",
+            "type": "string",
+            "message": "Somente o confirmador do Documento Transacional pode cancelar a confirmação do documento."
+        },
+        {
+            "key": "hasApple",
+            "type": "plural",
+            "message": "Tenho d% maçã.",
+            "selectorf": {
+                "arg": 1,
+                "format": "%d",
+                "cases": [
+                    "=1",
+                    "Tenho uma maçã.",
+                    "=2",
+                    "Tenho duas maçãs",
+                    "other",
+                    "Tenho %[1]d maçãs."
+                ]
+            }
+        }
+    ]
+}
