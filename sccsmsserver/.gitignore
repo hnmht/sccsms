@@ -1,0 +1,5 @@
+config.yaml
+*.log
+*.exe
+ui/out
+ui/dist
