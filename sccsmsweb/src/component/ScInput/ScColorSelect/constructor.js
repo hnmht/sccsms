@@ -1,0 +1,17 @@
+export const scColors = [
+    "white",
+    "red",
+    "orange",
+    "yellow",
+    "green",
+    "cyan",
+    "blue",
+    "purple",
+    "silver",
+    "gold",
+    "burlywood",
+    "brown",
+    "gray",
+    "indigo",
+    "black",
+];
