@@ -6,7 +6,7 @@ import { reqLandingPageInfo } from "../../../api/landingPage";
 
 const zeroInfo = {
   sysNameDisp: "systemName",
-  introText: "An open-source construction site management system that helps managers effectively implement on-site management measures.",
+  introText: "Turning Accountability into Action.",
   file: {
     "id": 0,
     "fileUrl": `/static/img/brands/introduce.jpg`,
