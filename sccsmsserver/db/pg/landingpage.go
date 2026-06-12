@@ -27,8 +27,8 @@ func initLandingPage() (isFinish bool, err error) {
 	}
 	// Step 2: Insert a default record into the landingpage table
 	sqlStr = `insert into landingpage(sysnamedisp,introtext,fileid,modifierid) 
-		values('SeaCloud Construction Site Managemnet System',
-		'An open-source construction site management system that helps managers effectively implement on-site management measures.'
+		values('Sea&Cloud Construction Site Managemnet System',
+		'Turning Accountability into Action.'
 		,0,10000);`
 	_, err = db.Exec(sqlStr)
 	if err != nil {

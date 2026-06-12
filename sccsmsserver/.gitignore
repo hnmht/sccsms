@@ -3,3 +3,4 @@ config.yaml
 *.exe
 ui/out
 ui/dist
+sccsmsserver
