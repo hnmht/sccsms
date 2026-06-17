@@ -2,9 +2,10 @@
   <a href="https://github.com/hnmht" target="_blank"><img width="128" height="128" src="sccsmsweb/public/static/img/brands/seacloud.png" alt="Material UI logo"></a>
 </p>
 
+# Sea&Cloud Construction Site Management System
 # Zero Harm, Built on Transparency.
-## Sea&Cloud Construction Site Management System
-### Why We Built This
+
+## Why We Built This
 This project originated in 2015, born from a critical need to improve safety protocols within a large mining group. At that time, the group faced a dire safety record, with multiple fatal accidents occurring annually. Despite frequent safety campaigns, the root causes of these accidents-entrenched chaos and a lack of accountability in field management-remained unaddressed.
 
 I observed that safety protocols were often ignored. Underground, workers and managers operated in silos, leaving critical safety checks-such as monitoring carbon monoxide levels, ensuring 36V lighting, or verifying rock stability-to mere formalities, Procedures were frequently bypassed to save time, and papaer-based records were easily falsified.
@@ -17,20 +18,38 @@ Within three months of implementation, the site was transformed. Long-standing s
 
 After leaving the group, I open-sourced this system as the **Sea&Cloud Construction Site Management System**. now enhanced with mobile capabilities. My mission is to share this proven framework with the mining and construction industries worldwide, empowering teams to eliminate risks and, most importantly, save lives.
 
-### Key Features
+## Key Features
 
-#### 🔒 On-Premises & Private Deployment
+### 🔒 On-Premises & Private Deployment
 SCCSMS is a fully self-hosted solution. You have complete control over you infrastructure-deploy it on you own cloud servers or internal hardware. Enterprise data, user accounts, and files remain entirely under your management, ensuring complete isolation from any third party. Your data remains yours. period.
-#### ☔ Built for Harsh Environments(Offline Capability)
+### ☔ Built for Harsh Environments(Offline Capability)
 Designed for the unique challenges of underground mines and remote areas, our mobile app features robust ***offline mode support***. Utilizing advanced local storage and mobile database technology, field personnel can continue their work and sync data whenever connectivity is restored.
-#### 😁 Lightweight & High Performance
+### 😁 Lightweight & High Performance
 The backend is built with ***Go(Golang)***, known for its exceptional concurrency and minimal resource footprint. The system is highly optimized for network efficiency, allowing it to run smoothly even on modest office hardware while supporting multiple concurrent users.
-#### ✅ Zero Licensing Costs
+### ✅ Zero Licensing Costs
 We believe in the power of open-source. SCCSMS is designed to run exclusively on mature, proven, and free technologies, including ***Linux, PostgreSQL, Minio/RustFS, Redis, and Nginx***, There are no hidden fees or proprietary licensing costs for the core infrastructure.
-#### 🍱 Optimized Storage & Traffic
+### 🍱 Optimized Storage & Traffic
 By leveraging ***file hashing technology***, the system ensures the uniqueness of every uploaded file. This effectively eliminates data redundancy, significantly reducing storage consumption and network bandwidth usage.
-#### ✨ Field-Oriented Usability
+### ✨ Field-Oriented Usability
 We prioritize the end-user experience. The mobile interface is specifically engineered for On-site environments, featuring intuitive input patterns such as ***reference-base entry and one-handed operation modes*** to facilitate quick and accurate data collection in the field.
+
+## Installation Guide
+
+## Prerequisites
+- **Supported Operating System:**
+  - ***Linux:*** Debian 12+ (64-bit) 
+  - ***Windows:*** Windows 10+ (64-bit)
+
+- **Dependencies:**
+  - **Database:** [PostgreSQL](https://www.postgresql.org/) 12+
+  - **Storage:** S3-compatible storage (e.g., [Minio](https://min.io) or [RustFS](https://rustfs.com/) )
+  - **Redis:** [Redis](https://redis.io/) 6+ (Optional: Only required for clustered deployments.)
+  - **Nginx:** [Nginx](https://nginx.org) (Optional: Only required for clustered deployments.)
+
+## Downloads
+- **Download the binary:** Get the latest binaries from our [Release Page](https://github.com/hnmht/sccsms/releases).
+- **Download the configuration template:** Download the **config.yaml** template [here](https://github.com/hnmht/sccsms/document/yaml/config.yaml)
+
 
 ### [Project Architecture & Directory Overview](document/architectureAndDirectory.md)
 

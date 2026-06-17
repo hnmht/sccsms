@@ -1,0 +1,46 @@
+addr: "192.168.3.125" 
+name: "sccsmsserver"
+mode: "release"
+port: 10120
+start_time: "2023-01-01"
+machine_id: 101
+tls: false
+certificatefile: "cert.pem"
+privatekeyfile: "key.pem"
+userlockth: 5
+iplockth: 10
+iplockedminutes: 15
+
+log:
+  level: "debug"
+  filename: "sccsmsserver.log"
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+
+postgresql:
+  host: "localhost"
+  port: 5432
+  dbname: "csmsdb"
+  username: "scdev"
+  password: "password"
+  max_open_conns: 200
+  max_idle_conns: 50
+  max_record: 5000
+
+s3storage:
+  endpoint: "http://192.168.3.125:9000"
+  accesskeyid: "minioadmin"
+  secretaccesskey: "password"
+  secure: false
+  selfsigned: false
+  defaultbucket: "seacloud"
+  location: "ap-guangzhou"
+
+redis:
+  enabled: false
+  host: "127.0.0.1"
+  port: 6379
+  db: 0
+  password: "password"
+  pool_size: 100
