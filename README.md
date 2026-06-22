@@ -45,10 +45,6 @@ We prioritize the end-user experience. The mobile interface is specifically engi
   - **Redis:** [Redis](https://redis.io/) 6+ (Optional: Only required for clustered deployments.)
   - **Nginx:** [Nginx](https://nginx.org) (Optional: Only required for clustered deployments.)
 
-## Downloads
-- **Download the binary:** Get the latest binaries from our [Release Page](https://github.com/hnmht/sccsms/releases).
-- **Download the configuration template:** Download the **config.yaml** template [here](https://github.com/hnmht/sccsms/blob/main/document/yaml/config.yaml)
-
 ## Installation
 
 ### [Setting up on linux](document/settingUp/settingUpOnLinux.md)
