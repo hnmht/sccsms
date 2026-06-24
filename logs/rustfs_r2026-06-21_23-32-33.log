@@ -1,0 +1,24 @@
+[2026-06-22 15:34:02.937853 +08:00] ERROR [s3s::ops] [C:\Users\runneradmin\.cargo\git\checkouts\s3s-5cf49da3e5499213\df2434d\crates\s3s\src\ops\mod.rs:262] [rustfs-worker:ThreadId(2)] custom route returns error err=S3Error(Inner { code: AccessDenied, message: Some("Signature is required"), request_id: None, status_code: None, source: None, headers: None })
+
+[2026-06-22 15:34:24.726665 +08:00] ERROR [s3s::ops] [C:\Users\runneradmin\.cargo\git\checkouts\s3s-5cf49da3e5499213\df2434d\crates\s3s\src\ops\mod.rs:276] [rustfs-worker:ThreadId(4)] error=S3Error { code: UnauthorizedAccess, message: "Your account is not signed up2, access_key: rustadmin", .. }
+
+[2026-06-22 15:34:24.726931 +08:00] ERROR [s3s::ops] [C:\Users\runneradmin\.cargo\git\checkouts\s3s-5cf49da3e5499213\df2434d\crates\s3s\src\ops\mod.rs:226] [rustfs-worker:ThreadId(4)] failed to prepare err=S3Error(Inner { code: UnauthorizedAccess, message: Some("Your account is not signed up2, access_key: rustadmin"), request_id: None, status_code: None, source: None, headers: None })
+
+[2026-06-22 15:34:34.137552 +08:00] ERROR [s3s::ops] [C:\Users\runneradmin\.cargo\git\checkouts\s3s-5cf49da3e5499213\df2434d\crates\s3s\src\ops\mod.rs:276] [rustfs-worker:ThreadId(3)] error=S3Error { code: UnauthorizedAccess, message: "Your account is not signed up2, access_key: rustadmin", .. }
+
+[2026-06-22 15:34:34.137770 +08:00] ERROR [s3s::ops] [C:\Users\runneradmin\.cargo\git\checkouts\s3s-5cf49da3e5499213\df2434d\crates\s3s\src\ops\mod.rs:226] [rustfs-worker:ThreadId(3)] failed to prepare err=S3Error(Inner { code: UnauthorizedAccess, message: Some("Your account is not signed up2, access_key: rustadmin"), request_id: None, status_code: None, source: None, headers: None })
+
+[2026-06-22 15:34:56.910747 +08:00] ERROR [rustfs_ecstore::disk::local] [crates\ecstore\src\disk\local.rs:276] [rustfs-worker:ThreadId(3)] cleanup_deleted_objects error: Io(Os { code: 5, kind: PermissionDenied, message: "拒绝访问。" })
+
+[2026-06-22 15:34:56.948243 +08:00] ERROR [s3s::ops] [C:\Users\runneradmin\.cargo\git\checkouts\s3s-5cf49da3e5499213\df2434d\crates\s3s\src\ops\mod.rs:276] [rustfs-worker:ThreadId(3)] error=S3Error { code: UnauthorizedAccess, message: "Your account is not signed up2, access_key: rusfstadmin", .. }
+
+[2026-06-22 15:34:56.948290 +08:00] ERROR [s3s::ops] [C:\Users\runneradmin\.cargo\git\checkouts\s3s-5cf49da3e5499213\df2434d\crates\s3s\src\ops\mod.rs:226] [rustfs-worker:ThreadId(3)] failed to prepare err=S3Error(Inner { code: UnauthorizedAccess, message: Some("Your account is not signed up2, access_key: rusfstadmin"), request_id: None, status_code: None, source: None, headers: None })
+
+[2026-06-22 15:34:58.809093 +08:00] ERROR [s3s::ops] [C:\Users\runneradmin\.cargo\git\checkouts\s3s-5cf49da3e5499213\df2434d\crates\s3s\src\ops\mod.rs:276] [rustfs-worker:ThreadId(3)] error=S3Error { code: UnauthorizedAccess, message: "Your account is not signed up2, access_key: rusfstadmin", .. }
+
+[2026-06-22 15:34:58.809222 +08:00] ERROR [s3s::ops] [C:\Users\runneradmin\.cargo\git\checkouts\s3s-5cf49da3e5499213\df2434d\crates\s3s\src\ops\mod.rs:226] [rustfs-worker:ThreadId(3)] failed to prepare err=S3Error(Inner { code: UnauthorizedAccess, message: Some("Your account is not signed up2, access_key: rusfstadmin"), request_id: None, status_code: None, source: None, headers: None })
+
+[2026-06-22 15:40:40.233753 +08:00] ERROR [rustfs_ecstore::disk::local] [crates\ecstore\src\disk\local.rs:276] [rustfs-worker:ThreadId(2)] cleanup_deleted_objects error: Io(Os { code: 5, kind: PermissionDenied, message: "拒绝访问。" })
+
+[2026-06-23 10:52:21.035824 +08:00] ERROR [rustfs] [rustfs\src\main.rs:132] [main:ThreadId(1)] Server encountered an error and is shutting down: Volume not found
+

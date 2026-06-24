@@ -132,7 +132,7 @@ You will be prompted to enter the password. A successful connection confirms the
 
 ## 3. Setting up RustFS
 
-Note: In light of MinIO's strategic shift toward MinIO AIStor, we recommend adopting RustFS as an alternative for S3-compatible storage
+Note: In light of MinIO's strategic shift toward MinIO AIStor, we recommend adopting RustFS as an alternative for S3-compatible storage.
 
 ### Step 1: Quick Installation
 Use the Quick Installation Script to install RustFS in Single Node Single Disk(SNSD) mode. (If you need to install RustFS in other modes, please see https://docs.rustfs.com/)
@@ -221,7 +221,7 @@ postgresql:
 
 s3storage:
   endpoint: "http://101.201.238.172:9000"
-  accesskeyid: "minioadmin"
+  accesskeyid: "rustfsadmin"
   secretaccesskey: "yourPassword"
   secure: false
   selfsigned: false

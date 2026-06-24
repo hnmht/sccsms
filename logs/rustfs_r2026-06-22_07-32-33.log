@@ -1,0 +1,2 @@
+[2026-06-22 15:32:33.952701 +08:00] ERROR [rustfs] [rustfs\src\main.rs:132] [main:ThreadId(1)] Server encountered an error and is shutting down: 以一种访问权限不允许的方式做了一个访问套接字的尝试。 (os error 10013)
+
