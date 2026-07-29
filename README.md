@@ -50,6 +50,16 @@ We prioritize the end-user experience. The mobile interface is specifically engi
 ### [Setting up on linux](document/settingUp/settingUpOnLinux.md)
 ### [Setting up on windwos](document/settingUp/settingUpOnWindows.md)
 
+## Demo System
+
+[Demo 1 (Regions outside Mainland China)](http://43.128.109.151:10033)
+
+[Demo 2 (Mainland China)](http://http://101.201.238.172:10033)
+
+| User Code | Password |
+|:---:|:---:|
+|admin| sc@123|
+|demo1| 123|
 
 
 ## [Project Architecture & Directory Overview](document/architectureAndDirectory.md)

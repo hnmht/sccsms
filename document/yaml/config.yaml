@@ -1,7 +1,7 @@
 addr: "192.168.3.125" 
 name: "sccsmsserver"
 mode: "release"
-port: 10120
+port: 10033
 start_time: "2023-01-01"
 machine_id: 101
 tls: false
@@ -21,17 +21,17 @@ log:
 postgresql:
   host: "localhost"
   port: 5432
-  dbname: "csmsdb"
-  username: "scdev"
-  password: "password"
+  dbname: "sccsmsdb"
+  username: "sccsmsuser"
+  password: "yourPassword"
   max_open_conns: 200
   max_idle_conns: 50
   max_record: 5000
 
 s3storage:
   endpoint: "http://192.168.3.125:9000"
-  accesskeyid: "minioadmin"
-  secretaccesskey: "password"
+  accesskeyid: "rustfsadmin"
+  secretaccesskey: "yourPassword"
   secure: false
   selfsigned: false
   defaultbucket: "seacloud"
@@ -42,5 +42,5 @@ redis:
   host: "127.0.0.1"
   port: 6379
   db: 0
-  password: "password"
+  password: "yourPassword"
   pool_size: 100

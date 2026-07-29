@@ -1,4 +1,11 @@
-import { CellCreator, CellCreateTime, CellModifyTime, CellModifier,CellSystemFlag } from "../pub/pubFunction";
+import {
+    CellCreator,
+    CellCreateTime,
+    CellModifyTime,
+    CellModifier,
+    CellSystemFlag
+} from "../pub/pubFunction";
+import { CellDescription } from "../pub/pubComponent";
 
 const rowCopyAddDisabled = (row) => {
     return row.systemFlag === 1;
@@ -30,41 +37,41 @@ export function delMultipleDisabled(selectedRows) {
     } else {
         let noDeleteRowNumber = 0;
         selectedRows.forEach((rows) => {
-            if (( rows.systemFlag) > 0) {
+            if ((rows.systemFlag) > 0) {
                 noDeleteRowNumber += 1
             }
         })
         return noDeleteRowNumber > 0 ? true : false;
-    }    
+    }
 }
 // Determine the row action button
 export const rowActionsDefine = {
-    rowCopyAdd:{
+    rowCopyAdd: {
         visible: true,
         disabled: rowCopyAddDisabled,
         color: "success",
         tips: "copyAdd",
         icon: "CopyNewIcon",
     },
-    rowViewDetail:{
+    rowViewDetail: {
         visible: true,
         disabled: rowViewDisabled,
-        color: "secondary", 
+        color: "secondary",
         tips: "detail",
-        icon: "DetailIcon", 
+        icon: "DetailIcon",
     },
-    rowEdit:{
+    rowEdit: {
         visible: true,
         disabled: rowEditDisabled,
         color: "warning",
         tips: "edit",
         icon: "EditIcon",
     },
-    rowDelete:{
+    rowDelete: {
         visible: true,
         disabled: rowDelDisabled,
         color: "error",
-        tips: "delete", 
+        tips: "delete",
         icon: "DeleteIcon",
     },
     rowStart: {
@@ -84,9 +91,9 @@ export const rowActionsDefine = {
 };
 // Determine the person list column
 export const columns = [
-    { id: "id", label: "id", alignment: "left", minWidth: 100, visible: false,sortField:"id", sort: true, display: { type: 0, cell1: null } },
+    { id: "id", label: "id", alignment: "left", minWidth: 100, visible: false, sortField: "id", sort: true, display: { type: 0, cell1: null } },
     { id: "name", label: "name", alignment: "center", minWidth: 200, visible: true, sortField: "name", sort: true, display: { type: 0, cell1: null } },
-    { id: "description", label: "description", alignment: "center", minWidth: 360, visible: true, sortField: "description", sort: true, display: { type: 0, cell1: null } },
+    { id: "description", label: "description", alignment: "center", minWidth: 360, visible: true, sortField: "description", sort: true, display: { type: 1, cell1: CellDescription } },
     { id: "systemFlag", label: "systemFlag", alignment: "center", minWidth: 60, visible: true, sortField: "systemFlag", sort: true, display: { type: 1, cell1: CellSystemFlag } },
     { id: "creator", label: "creator", alignment: "center", minWidth: 60, visible: true, sortField: "creator.name", sort: true, display: { type: 1, cell1: CellCreator } },
     { id: "createDate", label: "createDate", alignment: "center", minWidth: 60, visible: true, sortField: "createDate", sort: true, display: { type: 1, cell1: CellCreateTime } },
