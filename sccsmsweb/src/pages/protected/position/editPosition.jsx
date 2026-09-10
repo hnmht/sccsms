@@ -19,6 +19,7 @@ import MoreInfo from "../../../component/MoreInfo/MoreInfo";
 import { reqCheckPositionName, reqAddPosition, reqEditPosition } from '../../../api/position';
 import { InitDocCache } from '../../../storage/db/db';
 import { getCurrentPerson, checkVoucherNoBodyErrors } from '../pub/pubFunction';
+import ScEditButton from '../../../component/ScEditButton/ScEditButton';
 
 // Generate initial position values
 const getInitialValues = async (diagStatus) => {
@@ -247,13 +248,14 @@ const EditPosition = ({ diagStatus, onCancel, onOk }) => {
             </DialogContent>
             <Divider />
             <DialogActions sx={{ p: 2 }}>
-                {isEdit
-                    ? <>
-                        <Button color='error' onClick={onCancel}>{t("cancel")}</Button>
-                        <Button variant='contained' disabled={checkVoucherNoBodyErrors(errors)} onClick={handleAddPosition}>{isModify ? t("save") : t("add")}</Button>
-                    </>
-                    : <Button variant="contained" onClick={onCancel} >{t("back")}</Button>
-                }
+                <ScEditButton
+                    isEdit={isEdit}
+                    isModify={isModify}
+                    disabled={checkVoucherNoBodyErrors(errors)}
+                    onCancel={onCancel}
+                    onClick={handleAddPosition}
+                    t={t}
+                />
             </DialogActions>
         </>
         : <Loader />

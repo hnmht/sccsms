@@ -383,7 +383,7 @@ func (udc *UserDefineCategory) CheckUsed() (resStatus i18n.ResKey, err error) {
 	checkItems := []ArchiveCheckUsed{
 		{
 			Description:    "Refrenced by User-define Archive",
-			SqlStr:         "select count(id) as usednum from ud where dr=0  and udcid = $1",
+			SqlStr:         "select count(id) as usednum from uda where dr=0 and udcid = $1",
 			UsedReturnCode: i18n.StatusUDUsed,
 		},
 		{

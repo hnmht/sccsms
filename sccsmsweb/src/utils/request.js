@@ -9,7 +9,7 @@ import { i18n } from "../i18n/i18n";
 
 const service = axios.create({
     baseURL: "/api/v1", //"http://localhost:8080/api/v1"
-    timeout: 15000,
+    timeout: 60000,
 });
 
 const removeTokenCodes = ["CodeInvalidToken", "CodeNeedLogin", "CodeTokenDestroy", "CodeLoginOther"];

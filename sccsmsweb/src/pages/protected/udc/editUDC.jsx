@@ -14,6 +14,7 @@ import { Divider } from '../../../component/ScMui/ScMui';
 import Loader from '../../../component/Loader/Loader';
 import ScInput from '../../../component/ScInput';
 import MoreInfo from "../../../component/MoreInfo/MoreInfo";
+import ScEditButton from '../../../component/ScEditButton/ScEditButton';
 
 import { reqAddUDC, reqEditUDC, reqCheckUDCName } from '../../../api/udc';
 import { InitDocCache } from '../../../storage/db/db';
@@ -249,13 +250,14 @@ const EditUDC = ({ diagStatus, onCancel, onOk }) => {
             </DialogContent>
             <Divider />
             <DialogActions sx={{ p: 2 }}>
-                {isEdit
-                    ? <>
-                        <Button color='error' onClick={onCancel}>{t("cancel")}</Button>
-                        <Button variant='contained' disabled={checkVoucherNoBodyErrors(errors)} onClick={handleAddUDC}>{isModify ? t("save") : t("add")}</Button>
-                    </>
-                    : <Button variant="contained" onClick={onCancel} >{t("back")}</Button>
-                }
+                <ScEditButton
+                    isEdit={isEdit}
+                    isModify={isModify}
+                    onCancel={onCancel}
+                    onClick={handleAddUDC}
+                    disabled={checkVoucherNoBodyErrors(errors)}
+                    t={t}
+                />               
             </DialogActions>
         </>
         : <Loader />

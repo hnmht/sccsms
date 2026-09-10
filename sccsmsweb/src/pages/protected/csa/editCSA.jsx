@@ -8,11 +8,12 @@ import {
 } from "@mui/material";
 import { message } from 'mui-message';
 import { cloneDeep } from 'lodash';
-import { DateTimeFormat, dayjs, EpochTime } from '../../../i18n/dayjs';
+import { EpochTime } from '../../../i18n/dayjs';
 import { Divider } from '../../../component/ScMui/ScMui';
 import Loader from '../../../component/Loader/Loader';
 import ScInput from '../../../component/ScInput';
 import MoreInfo from "../../../component/MoreInfo/MoreInfo";
+import ScEditButton from '../../../component/ScEditButton/ScEditButton';
 import { getCurrentPerson, checkVoucherNoBodyErrors } from '../pub/pubFunction';
 import { reqAddCS, reqEditCS, reqCheckCSCode } from '../../../api/csa';
 import { useTranslation } from 'react-i18next';
@@ -421,13 +422,14 @@ const EditCSA = ({ isOpen, isNew, isModify, oriCS, options, CSC, onCancel, onOk 
             </DialogContent>
             <Divider />
             <DialogActions sx={{ p: 2.5 }}>
-                {isEdit
-                    ? <>
-                        <Button color='error' onClick={onCancel}>{t("cancel")}</Button>
-                        <Button variant='contained' disabled={checkVoucherNoBodyErrors(errors)} onClick={handleAddCS}>{isModify ? t("save") : t("add")}</Button>
-                    </>
-                    : <Button variant='contained' onClick={onCancel}>{t("back")}</Button>
-                }
+                <ScEditButton
+                    isEdit={isEdit}
+                    isModify={isModify}
+                    disabled={checkVoucherNoBodyErrors(errors)}
+                    onCancel={onCancel}
+                    onClick={handleAddCS}
+                    t={t}
+                />
             </DialogActions>
         </>
         : <Loader />

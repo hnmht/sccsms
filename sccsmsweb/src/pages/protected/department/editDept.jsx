@@ -20,6 +20,7 @@ import { findChildrens } from '../../../utils/tree';
 import { GetLocalCache } from '../../../storage/db/db';
 import { getCurrentPerson, checkVoucherNoBodyErrors } from '../pub/pubFunction';
 import { useTranslation } from 'react-i18next';
+import ScEditButton from '../../../component/ScEditButton/ScEditButton';
 
 // Generate initial values for the department master data
 const getInitialValues = async (oriDept, isNew, isModify) => {
@@ -319,17 +320,15 @@ const EditDept = ({ isOpen, isNew, isModify, oriDept, onCancel, onOk }) => {
                 </MoreInfo>
             </DialogContent>
             <Divider />
-            <DialogActions sx={{ p: 2.5 }}>
-                {isEdit
-                    ? <>
-                        <Button color='error' onClick={onCancel}>{t("cancel")}</Button>
-                        <Button variant='contained' disabled={checkVoucherNoBodyErrors(errors)} onClick={handleAddDept}>{isModify ? t("save") : t("add")}</Button>
-                    </>
-                    : <Button variant='contained' onClick={onCancel}>{t("back")}</Button>
-                }
-
-
-
+            <DialogActions sx={{ p: 2.5 }}>                
+                <ScEditButton
+                    isEdit={isEdit}
+                    isModify={isModify}
+                    disabled={checkVoucherNoBodyErrors(errors)}
+                    onCancel={onCancel}
+                    onClick={handleAddDept}
+                    t={t}
+                />
             </DialogActions>
         </>
         : <Loader />

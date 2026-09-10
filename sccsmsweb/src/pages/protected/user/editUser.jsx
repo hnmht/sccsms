@@ -15,6 +15,7 @@ import { Divider } from '../../../component/ScMui/ScMui';
 import ScInput from '../../../component/ScInput';
 import Loader from '../../../component/Loader/Loader';
 import MoreInfo from '../../../component/MoreInfo/MoreInfo';
+import ScEditButton from '../../../component/ScEditButton/ScEditButton';
 import { getCurrentPerson } from '../pub/pubFunction';
 import { reqValidateUserCode, reqAddUser, reqEditUser } from '../../../api/user';
 import { reqGetPublicKey } from '../../../api/security';
@@ -473,13 +474,21 @@ const EditUser = ({ isOpen, isNew, isModify, oriUser, onCancel, onOk }) => {
             </DialogContent>
             <Divider />
             <DialogActions sx={{ p: 2.5 }}>
-                {isEdit
+                <ScEditButton
+                    isEdit={isEdit}
+                    isModify={isModify}
+                    disabled={checkVoucherNoBodyErrors(errors)}
+                    onCancel={onCancel}
+                    onClick={handleAddUser}
+                    t={t}
+                />
+               {/*  {isEdit
                     ? <>
                         <Button color='error' variant='contained' onClick={onCancel}>{t("cancel")}</Button>
-                        <Button variant='contained' disabled={checkVoucherNoBodyErrors(errors)} onClick={handleAddUser}>{isModify ? t("save") : t("add")}</Button>
+                        <ScEditButton variant='contained' disabled={checkVoucherNoBodyErrors(errors)} onClick={handleAddUser}>{isModify ? t("save") : t("add")}</ScEditButton>
                     </>
                     : <Button variant="contained" onClick={onCancel} >{t("back")}</Button>
-                }
+                } */}
             </DialogActions>
         </>
         : <Loader />

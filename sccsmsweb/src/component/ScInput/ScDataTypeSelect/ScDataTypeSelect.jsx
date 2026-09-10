@@ -15,7 +15,6 @@ const ScDataTypeSelect = (props) => {
     const [errInfo, setErrInfo] = useState({ isErr: false, msg: "" });
     const id = `101_${itemKey}_${positionID}_${rowIndex}`;
     const { t } = useTranslation();
-    console.log("initValue:",initValue);
     // Check value and pass it to the parents
     const handleOnBlur = async (doc = currentType) => {
         if (!isEdit) {

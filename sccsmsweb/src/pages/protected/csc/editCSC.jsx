@@ -19,7 +19,6 @@ import { findChildrens } from '../../../utils/tree';
 import { getCurrentPerson, checkVoucherNoBodyErrors } from '../pub/pubFunction';
 import { GetLocalCache } from '../../../storage/db/db';
 
-
 // Generate initial Construction Site Category
 const getInitialValues = async (oriDoc, isNew, isModify) => {
     const person = await getCurrentPerson();
@@ -283,14 +282,15 @@ const EditCSC = ({ isOpen, isNew, isModify, oriDoc, onCancel, onOk }) => {
                 </MoreInfo>
             </DialogContent>
             <Divider />
-            <DialogActions>
-                {isEdit
-                    ? <>
-                        <Button color='error' onClick={onCancel}>{t("cancel")}</Button>
-                        <Button variant='contained' disabled={checkVoucherNoBodyErrors(errors)} onClick={handleAddCSC}>{isModify ? t("save") : t("add")}</Button>
-                    </>
-                    : <Button variant="contained" onClick={onCancel} >{t("back")}</Button>
-                }
+            <DialogActions>              
+                <ScEditButton
+                    isEdit={isEdit}
+                    isModify={isModify}
+                    disabled={checkVoucherNoBodyErrors(errors)}
+                    onCancel={onCancel}
+                    onClick={handleAddCSC}
+                    t={t}
+                />
             </DialogActions>
         </>
         : <Loader />

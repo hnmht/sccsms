@@ -20,6 +20,7 @@ import { transEPToBackend } from "../../../storage/db/db";
 import { reqAddEP, reqCheckEPCode, reqEditEP } from '../../../api/epa';
 import { getCurrentPerson, checkVoucherNoBodyErrors } from '../pub/pubFunction';
 import { useTranslation } from 'react-i18next';
+import ScEditButton from '../../../component/ScEditButton/ScEditButton';
 
 // Generate initial Execution Project 
 const getInitialValues = async (oriEP, isNew, isModify, currentEPC) => {
@@ -435,13 +436,14 @@ const EditEP = ({ isOpen, isNew, isModify, oriEP, EPC, onCancel, onOk }) => {
             </DialogContent>
             <Divider />
             <DialogActions sx={{ p: 2.5 }}>
-                {isEdit
-                    ? <>
-                        <Button color='error' onClick={onCancel}>{t("cancel")}</Button>
-                        <Button variant='contained' disabled={checkVoucherNoBodyErrors(errors)} onClick={handleAddEP}>{t(isModify ? "save" : "add")}</Button>
-                    </>
-                    : <Button variant='contained' onClick={onCancel}>{t("back")}</Button>
-                }
+                <ScEditButton
+                    isEdit={isEdit}
+                    isModify={isModify}
+                    disabled={checkVoucherNoBodyErrors(errors)}
+                    onCancel={onCancel}
+                    onClick={handleAddEP}
+                    t={t}
+                />
             </DialogActions>
         </>
         : <Loader />

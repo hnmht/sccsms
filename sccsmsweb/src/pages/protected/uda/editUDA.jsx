@@ -11,6 +11,7 @@ import { message } from 'mui-message';
 import { EpochTime } from '../../../i18n/dayjs';
 import { cloneDeep } from 'lodash';
 import { Divider } from '../../../component/ScMui/ScMui';
+import ScEditButton from '../../../component/ScEditButton/ScEditButton';
 import ScInput from '../../../component/ScInput';
 import Loader from '../../../component/Loader/Loader';
 import MoreInfo from '../../../component/MoreInfo/MoreInfo';
@@ -267,13 +268,14 @@ const EditUDA = ({ isOpen, isNew, isModify, oriUDA, UDC, onCancel, onOk }) => {
             </DialogContent>
             <Divider />
             <DialogActions sx={{ p: 2.5 }}>
-                {isEdit
-                    ? <>
-                        <Button color='error' onClick={onCancel}>{t("cancel")}</Button>
-                        <Button variant='contained' disabled={checkVoucherNoBodyErrors(errors)} onClick={handleAddUDA}>{isModify ? t("save") : t("add")}</Button>
-                    </>
-                    : <Button variant="contained" onClick={onCancel} >{t("back")}</Button>
-                }
+                <ScEditButton
+                    isEdit={isEdit}
+                    isModify={isModify}                 
+                    onCancel={onCancel}
+                    onClick={handleAddUDA}
+                    disabled={checkVoucherNoBodyErrors(errors)}
+                    t={t}                   
+                />               
             </DialogActions>
         </>
         : <Loader />

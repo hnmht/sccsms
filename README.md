@@ -54,7 +54,7 @@ We prioritize the end-user experience. The mobile interface is specifically engi
 
 [Demo 1 (Regions outside Mainland China)](http://43.128.109.151:10033)
 
-[Demo 2 (Mainland China)](http://http://101.201.238.172:10033)
+[Demo 2 (Mainland China)](http://101.201.238.172:10033)
 
 | User Code | Password |
 |:---:|:---:|

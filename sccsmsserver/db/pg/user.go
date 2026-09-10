@@ -824,12 +824,12 @@ func (user *User) CheckIsUsed() (resStatus i18n.ResKey, err error) {
 		},
 		{
 			Description:    "Referenced by User-defined Archive creator",
-			SqlStr:         "select count(id) from userdefinedoc where dr = 0 and creatorid=$1",
+			SqlStr:         "select count(id) from uda where dr = 0 and creatorid=$1",
 			UsedReturnCode: i18n.StatusUDCreateUsed,
 		},
 		{
 			Description:    "Referenced by User-defined Archive modifier",
-			SqlStr:         "select count(id) from userdefinedoc where dr = 0 and modifierid=$1",
+			SqlStr:         "select count(id) from uda where dr = 0 and modifierid=$1",
 			UsedReturnCode: i18n.StatusUDModifyUsed,
 		},
 		{
@@ -955,7 +955,7 @@ func (user *User) CheckIsUsed() (resStatus i18n.ResKey, err error) {
 		},
 		{
 			Description:    "Referenced by Issue Resolution Form fixer",
-			SqlStr:         "select count(id) from issueresolutionform where dr = 0 and fixerid=$1",
+			SqlStr:         "select count(id) from issueresolutionform where dr = 0 and handlerid=$1",
 			UsedReturnCode: i18n.StatusIRFFixerUsed,
 		},
 		{
