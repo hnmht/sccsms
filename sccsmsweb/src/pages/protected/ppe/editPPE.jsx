@@ -12,6 +12,7 @@ import { cloneDeep } from 'lodash';
 import { EpochTime } from '../../../i18n/dayjs';
 
 import { Divider } from '../../../component/ScMui/ScMui';
+import ScEditButton from '../../../component/ScEditButton/ScEditButton';
 import Loader from '../../../component/Loader/Loader';
 import ScInput from '../../../component/ScInput';
 import MoreInfo from "../../../component/MoreInfo/MoreInfo";
@@ -290,13 +291,21 @@ const EditPPE = ({ diagStatus, onCancel, onOk }) => {
             </DialogContent>
             <Divider />
             <DialogActions sx={{ p: 2 }}>
-                {isEdit
+                <ScEditButton
+                    isEdit={isEdit}
+                    isModify={isModify}
+                    disabled={checkVoucherNoBodyErrors(errors)}
+                    onCancel={onCancel}
+                    onClick={handleAddPPE}
+                    t={t}
+                />
+               {/*  {isEdit
                     ? <>
                         <Button color='error' onClick={onCancel}>{t("cancel")}</Button>
                         <Button variant='contained' disabled={checkVoucherNoBodyErrors(errors)} onClick={handleAddPPE}>{t(isModify ? "save" : "add")}</Button>
                     </>
                     : <Button variant="contained" onClick={onCancel} >{(t("back"))}</Button>
-                }
+                } */}
             </DialogActions>
         </>
         : <Loader />

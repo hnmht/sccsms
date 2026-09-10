@@ -14,6 +14,7 @@ import { Divider } from '../../../component/ScMui/ScMui';
 import ScInput from '../../../component/ScInput';
 import Loader from '../../../component/Loader/Loader';
 import MoreInfo from '../../../component/MoreInfo/MoreInfo';
+import ScEditButton from '../../../component/ScEditButton/ScEditButton';
 
 import { reqCheckEPCName, reqAddEPC, reqEditEPC } from '../../../api/epc';
 import { findChildrens } from '../../../utils/tree';
@@ -274,13 +275,14 @@ const EditEPC = ({ isOpen, isNew, isModify, oriDoc, onCancel, onOk }) => {
             </DialogContent>
             <Divider />
             <DialogActions>
-                {isEdit
-                    ? <>
-                        <Button color='error' onClick={onCancel}>{t("cancel")}</Button>
-                        <Button variant='contained' disabled={checkVoucherNoBodyErrors(errors)} onClick={handleAddEPC}>{isModify ? t("save") : t("add")}</Button>
-                    </>
-                    : <Button variant="contained" onClick={onCancel} >{t("back")}</Button>
-                }
+                <ScEditButton
+                    isEdit={isEdit}
+                    isModify={isModify}
+                    disabled={checkVoucherNoBodyErrors(errors)}
+                    onCancel={onCancel}
+                    onClick={handleAddEPC}
+                    t={t}
+                />               
             </DialogActions>
         </>
         : <Loader />

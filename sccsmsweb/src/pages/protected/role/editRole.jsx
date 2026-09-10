@@ -17,6 +17,7 @@ import { reqValidateRoleName, reqEditRole, reqAddRole } from "../../../api/role"
 import { getCurrentPerson } from "../pub/pubFunction";
 import Loader from "../../../component/Loader/Loader";
 import MoreInfo from "../../../component/MoreInfo/MoreInfo";
+import ScEditButton from "../../../component/ScEditButton/ScEditButton";
 import { checkVoucherNoBodyErrors } from '../pub/pubFunction';
 
 // General initialization data.
@@ -249,13 +250,14 @@ const EditRole = ({ isOpen, isNew, isModify, oriRole, onCancel, onOk }) => {
             </DialogContent>
             <Divider />
             <DialogActions>
-                {isEdit
-                    ? <>
-                        <Button color="error" onClick={onCancel} >{t("cancel")}</Button>
-                        <Button variant="contained" disabled={checkVoucherNoBodyErrors(errors)} onClick={handleAddRole}>{isModify ? t("save") : t("add")}</Button>
-                    </>
-                    : <Button variant="contained" onClick={onCancel} >{t("back")}</Button>
-                }
+                <ScEditButton
+                    isEdit={isEdit}
+                    isModify={isModify}
+                    disabled={checkVoucherNoBodyErrors(errors)}
+                    onCancel={onCancel}
+                    onClick={handleAddRole}
+                    t={t}
+                />                
             </DialogActions>
         </>
         : <Loader />

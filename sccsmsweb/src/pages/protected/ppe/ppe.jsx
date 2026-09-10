@@ -62,7 +62,7 @@ const PPE = () => {
     const handleRowDelete = async (item) => {
         const delRes = await reqDeletePPE(item);
         if (delRes.status) {
-            message.success(t("delSuccessfule"));
+            message.success(t("deleteSuccessful"));
             // Refresh
             handleReqPPEList();
         } 
@@ -102,7 +102,7 @@ const PPE = () => {
     const handleDelMultiple = async (lps) => {
         const delRes = await reqDeletePPEs(lps);
         if (delRes.status) {
-            message.success(t("batchDelSuccessful"));
+            message.success(t("batchDeleteSuccessful"));
             // Refresh
             handleReqPPEList();
         } 

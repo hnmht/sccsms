@@ -482,13 +482,7 @@ const EditUser = ({ isOpen, isNew, isModify, oriUser, onCancel, onOk }) => {
                     onClick={handleAddUser}
                     t={t}
                 />
-               {/*  {isEdit
-                    ? <>
-                        <Button color='error' variant='contained' onClick={onCancel}>{t("cancel")}</Button>
-                        <ScEditButton variant='contained' disabled={checkVoucherNoBodyErrors(errors)} onClick={handleAddUser}>{isModify ? t("save") : t("add")}</ScEditButton>
-                    </>
-                    : <Button variant="contained" onClick={onCancel} >{t("back")}</Button>
-                } */}
+               
             </DialogActions>
         </>
         : <Loader />

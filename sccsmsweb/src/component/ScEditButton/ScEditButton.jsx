@@ -17,7 +17,7 @@ function ScEditButton({ isEdit, isModify, disabled, onClick, onCancel, t }) {
     return isEdit
         ? <>
             <Button color="error" onClick={onCancel} disabled={loading} >{t("cancel")}</Button>
-            <LoadingButton variant="contained"  loading={internalLoading} onClick={internalOnClick}>{t(isModify ? "save" : "add")}</LoadingButton>
+            <LoadingButton variant="contained" disabled={internalLoading} loading={loading} onClick={internalOnClick}>{t(isModify ? "save" : "add")}</LoadingButton>
         </>
         : <Button variant="contained" onClick={onCancel} >{t("back")}</Button>
 }

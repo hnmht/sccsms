@@ -4,6 +4,7 @@ import {
     Paper,
     Stack,
 } from "@mui/material";
+import { LoadingButton } from "@mui/lab";
 import { message } from "mui-message";
 import { useTranslation } from "react-i18next";
 import { Divider, Button } from "../../../component/ScMui/ScMui";
@@ -18,6 +19,7 @@ import { cloneDeep } from "lodash";
 // Assign menu permissions to role
 function PermissionAssignment() {
     const [roles, setRoles] = useState([]); // Role list
+    const [loading, setLoading] = useState(false);
     const [menus, setMenus] = useState([]); // All menus
     const [currentRole, setCurrentRole] = useState(undefined) // Current role
     const [auths, setAuths] = useState([]);
@@ -85,30 +87,36 @@ function PermissionAssignment() {
 
     // Actions after click save button in the head
     const handleSave = async () => {
-        // Request permission changes from the server
-        const res = await reqUpdateRoleAuths({ role: currentRole, auths: auths });
-        if (res.status) {
-            message.success(t("modifySuccessful"));
-        }
-        // Modify the current interface to be non-editable
-        setIsEdit(false);
-        // Refresh role list
-        let newRoles = [];
-        const resRoles = await reqGetRoles();
-        if (resRoles.status) {
-            newRoles = resRoles.data;
-        }
-        setRoles(newRoles);
-        // Find currentRole in the new role list
-        let newCurrentRole = undefined;
-        newRoles.forEach(role => {
-            if (role.id === currentRole.id) {
-                newCurrentRole = role;
+        if (loading) return;
+        setLoading(true);
+        try {
+            const res = await reqUpdateRoleAuths({ role: currentRole, auths: auths });
+            // Request permission changes from the server
+            if (res.status) {
+                message.success(t("modifySuccessful"));
             }
-        });
-        setCurrentRole(newCurrentRole);
-        // Refresh current role permission
-        handleRoleSelectOk(newCurrentRole);
+            // Modify the current interface to be non-editable
+            setIsEdit(false);
+            // Refresh role list
+            let newRoles = [];
+            const resRoles = await reqGetRoles();
+            if (resRoles.status) {
+                newRoles = resRoles.data;
+            }
+            setRoles(newRoles);
+            // Find currentRole in the new role list
+            let newCurrentRole = undefined;
+            newRoles.forEach(role => {
+                if (role.id === currentRole.id) {
+                    newCurrentRole = role;
+                }
+            });
+            setCurrentRole(newCurrentRole);
+            // Refresh current role permission
+            handleRoleSelectOk(newCurrentRole);
+        } finally {
+            setLoading(false);
+        }       
     };
     // Action after click the cancel button
     const handleCancel = () => {
@@ -139,20 +147,23 @@ function PermissionAssignment() {
                     </Button>
                     <Button
                         variant="contained"
-                        disabled={!isEdit}
+                        color="error"
                         m={1}
-                        onClick={handleSave}
-                    >
-                        {t("save")}
-                    </Button>
-                    <Button
-                        variant="contained"
-                        m={1}
-                        disabled={!isEdit}
+                        disabled={!isEdit || loading}
                         onClick={handleCancel}
                     >
                         {t("cancel")}
                     </Button>
+                    <LoadingButton
+                        variant="contained"
+                        disabled={!isEdit}
+                        loading={loading}
+                        m={1}
+                        onClick={handleSave}
+                    >
+                        {t("save")}
+                    </LoadingButton>
+
                 </Stack>
                 <Grid container spacing={2}>
                     <Grid item xs={4}>
