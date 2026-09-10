@@ -628,6 +628,7 @@
     "returnHomepage":"Return to Homepage",
     "page203":"You do not have permission to access this page. Please contact the system administrator.",
     "operationDate": "Operation Date",
+    "loading":"Loading...",
 
     "MenuDashboard": "Dashboard",
     "MenuCalendar": "Calendar",

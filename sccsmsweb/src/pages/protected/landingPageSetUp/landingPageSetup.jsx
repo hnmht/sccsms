@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import styled from "@emotion/styled";
-import { Paper, Divider, Card, CardContent, Grid, Typography, Button, } from "@mui/material";
+import { Paper, Divider, Grid, Typography, Button, } from "@mui/material";
+import { LoadingButton } from "@mui/lab";
 import { useTranslation } from "react-i18next";
-import { message } from "mui-message";
 
 import PageTitle from "../../../component/PageTitle/PageTitle";
 import Loader from "../../../component/Loader/Loader";
@@ -53,6 +53,7 @@ const ImageWrapper = styled.div`
 const LandingPageSetUp = () => {
     const [currentSetup, setCurrentSetup] = useState(undefined);
     const [isEdit, setIsEdit] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [errors, setErrors] = useState({});
     const { t } = useTranslation();
     const contentHeight = useContentHeight();
@@ -108,13 +109,19 @@ const LandingPageSetUp = () => {
 
     // Actions after click the save button
     const handleModifySetup = async () => {
+        setLoading(true);
         let newInfo = cloneDeep(currentSetup);
-        const modifyRes = await reqModifyLandingPageInfo(newInfo);
-        if (modifyRes.status) {
-            newInfo = modifyRes.data;
+        try {
+            const modifyRes = await reqModifyLandingPageInfo(newInfo);
+            if (modifyRes.status) {
+                newInfo = modifyRes.data;
+            }
+            setCurrentSetup(newInfo);
+            setIsEdit(false);
+        } finally {
+            setLoading(false);
         }
-        setCurrentSetup(newInfo);
-        setIsEdit(false);
+        
     };
 
     return (
@@ -128,8 +135,8 @@ const LandingPageSetUp = () => {
                             <Grid item xs={12} textAlign="left" pb={4}>
                                 {isEdit
                                     ? <>
-                                        <Button variant='contained' disabled={checkVoucherNoBodyErrors(errors)} onClick={handleModifySetup}>{t("save")}</Button>
-                                        <Button color='error' variant='contained' onClick={() => setIsEdit(false)} sx={{ ml: 4 }}>{t("cancel")}</Button>
+                                        <LoadingButton variant='contained' disabled={checkVoucherNoBodyErrors(errors)} loading={loading} onClick={handleModifySetup}>{t("save")}</LoadingButton>
+                                        <Button color='error' variant='contained' disabled={loading} onClick={() => setIsEdit(false)} sx={{ ml: 4 }}>{t("cancel")}</Button>
                                     </>
                                     : <Button variant="contained" onClick={() => setIsEdit(true)} >{t("edit")}</Button>
                                 }

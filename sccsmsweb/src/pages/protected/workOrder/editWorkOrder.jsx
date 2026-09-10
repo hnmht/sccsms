@@ -9,12 +9,14 @@ import {
     Button,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { dayjs, DateTimeFormat, EpochTime } from "../../../i18n/dayjs";
+import { dayjs, EpochTime } from "../../../i18n/dayjs";
 import { cloneDeep } from "lodash";
 import { message } from "mui-message";
 
 import { CopyAddRowIcon, DeleteRowIcon } from "../../../component/PubIcon/PubIcon";
 import ScInput from "../../../component/ScInput";
+import { ScVoucherBody, ScVoucherBodyRow } from "../../../component/ScVoucher";
+import ScEditButton from "../../../component/ScEditButton/ScEditButton";
 import Loader from "../../../component/Loader/Loader";
 import { MultiSortByArr } from "../../../utils/tools";
 import { voucherRow, bodyColumns } from "./constructor";
@@ -23,7 +25,7 @@ import { reqAddWO, reqEditWO } from "../../../api/workOrder";
 import { transWOToBackend } from "./constructor";
 
 import { getCurrentPerson, generateVoucherErrors, checkVoucherErrors } from "../pub/pubFunction";
-import { ScVoucherBody, ScVoucherBodyRow } from "../../../component/ScVoucher";
+
 
 // Generate initial data
 const getInitialValue = async (oriWO, isNew, isModify) => {
@@ -613,13 +615,14 @@ const EditWorkOrder = ({ isOpen, isNew, isModify, oriWO, onCancel, onOk }) => {
                 </Grid>
             </Stack>
             <DialogActions sx={{ m: 1 }}>
-                {isEdit
-                    ? <>
-                        <Button color="error" onClick={onCancel} >{t("cancel")}</Button>
-                        <Button variant="contained" disabled={checkVoucherErrors(errors)} onClick={handleAddWO}>{t(isModify ? "save" : "add")}</Button>
-                    </>
-                    : <Button variant="contained" onClick={onCancel} >{t("back")}</Button>
-                }
+                <ScEditButton
+                    isEdit={isEdit}
+                    isModify={isModify}
+                    disabled={checkVoucherErrors(errors)}
+                    onCancel={onCancel}
+                    onClick={handleAddWO}
+                    t={t}
+                />
             </DialogActions>
         </Stack>
         : <Loader />

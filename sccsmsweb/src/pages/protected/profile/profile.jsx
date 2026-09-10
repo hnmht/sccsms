@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent, Grid, Button, Paper } from "@mui/material";
+import { LoadingButton } from "@mui/lab";
 import { useTranslation } from "react-i18next";
 import { message } from "mui-message";
 import { cloneDeep } from "lodash";
@@ -16,8 +17,9 @@ import { getUserInfo } from "../../../store/pub";
 const Profile = () => {
     const [currentUser, setCurrentUser] = useState(undefined);
     const [isEdit, setIsEdit] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [errors, setErrors] = useState({});
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
     const contentHeight = useContentHeight();
     useEffect(() => {
@@ -26,7 +28,7 @@ const Profile = () => {
             let user = {};
             if (userRes.status) {
                 user = userRes.data;
-            } 
+            }
             setCurrentUser(user);
         }
         initialData();
@@ -53,18 +55,23 @@ const Profile = () => {
     };
     // Submit the modified information to the server
     const handleModifyUser = async () => {
-        let thisUser = cloneDeep(currentUser);       
-        delete thisUser.menuList;
-        delete thisUser.createDate;
-        delete thisUser.modifyDate;
-        delete thisUser.roles;
-        const modifyRes = await reqModifyProfile(thisUser);
-        if (modifyRes.status) {
-            thisUser = modifyRes.data;
-            message.success(t("modifySuccessful"));
-        } 
-        setCurrentUser(thisUser);
-        setIsEdit(false);
+        setLoading(true);
+        try {
+            let thisUser = cloneDeep(currentUser);
+            delete thisUser.menuList;
+            delete thisUser.createDate;
+            delete thisUser.modifyDate;
+            delete thisUser.roles;
+            const modifyRes = await reqModifyProfile(thisUser);
+            if (modifyRes.status) {
+                thisUser = modifyRes.data;
+                message.success(t("modifySuccessful"));
+            }
+            setCurrentUser(thisUser);
+            setIsEdit(false);
+        } finally {
+            setLoading(false);
+        }
         // Update Redux
         getUserInfo();
 
@@ -201,8 +208,8 @@ const Profile = () => {
                             <Grid item xs={12} textAlign="right" pr={36}>
                                 {isEdit
                                     ? <>
-                                        <Button color='error' variant='contained' onClick={() => setIsEdit(false)} sx={{ mr: 5 }}>{t("cancel")}</Button>
-                                        <Button variant='contained' disabled={checkVoucherNoBodyErrors(errors)} onClick={handleModifyUser}>{t("save")}</Button>
+                                        <Button color='error' variant='contained' disabled={loading} onClick={() => setIsEdit(false)} sx={{ mr: 5 }}>{t("cancel")}</Button>
+                                        <LoadingButton variant='contained' disabled={checkVoucherNoBodyErrors(errors)} loading={loading} onClick={handleModifyUser}>{t("save")}</LoadingButton>
                                     </>
                                     : <Button variant="contained" onClick={() => setIsEdit(true)} >{t("edit")}</Button>
                                 }

@@ -1,8 +1,9 @@
 // import merge from "deepmerge";
 import { merge } from "lodash";
 
-import { green, grey, indigo,red } from "@mui/material/colors";
+import { green, grey, indigo, red } from "@mui/material/colors";
 import { THEMES } from "../constants";
+import zIndex from "@mui/material/styles/zIndex";
 
 const customBlue = {
     50: "#e9f0fb",
@@ -18,16 +19,16 @@ const customBlue = {
 };
 
 const defaultVariant = {
-    name:THEMES.DEFAULT,
-    palette:{
-        mode:"light",
-        primary:{
-            main:customBlue[700],
-            contrastText:"#FFF",
+    name: THEMES.DEFAULT,
+    palette: {
+        mode: "light",
+        primary: {
+            main: customBlue[700],
+            contrastText: "#FFF",
         },
-        secondary:{
-            main:customBlue[500],
-            contrastText:"#FFF",
+        secondary: {
+            main: customBlue[500],
+            contrastText: "#FFF",
         },
         background: {
             default: "#F7F9FC",
@@ -69,11 +70,11 @@ const defaultVariant = {
             color: "#FFF",
             background: customBlue[500],
         },
-    },
+    },   
 };
 
 
-const darkVariant = merge({},defaultVariant, {
+const darkVariant = merge({}, defaultVariant, {
     name: THEMES.DARK,
     palette: {
         mode: "dark",

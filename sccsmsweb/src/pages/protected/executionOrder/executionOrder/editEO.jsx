@@ -22,6 +22,7 @@ import ScInput from "../../../../component/ScInput";
 import { GetCacheDocById } from "../../../../storage/db/db";
 import { reqAddEO, reqEditEO } from "../../../../api/executionOrder";
 import { voucherRow, eptBodyToEoBody, bodyColumns, checkForProblem, transEOToBackend } from "./constructor";
+import ScEditButton from "../../../../component/ScEditButton/ScEditButton";
 import { generateVoucherErrors, checkVoucherErrors } from "../../pub/pubFunction";
 
 // Generate initial data
@@ -266,7 +267,7 @@ const EditExecutionOrder = ({ isOpen, isNew, isModify, oriWOR, oriEO, onCancel, 
             let newErrors = cloneDeep(prevState);
             // If the EPT field is modified and the value is different from the previous value
             if (isModifyEpt) {
-                let bodyErrors = generateErrors(newEptRowNumber);
+                let bodyErrors = generateVoucherErrors(newEptRowNumber);
                 newErrors.body = bodyErrors.body;
             }
             switch (positionID) {
@@ -941,13 +942,21 @@ const EditExecutionOrder = ({ isOpen, isNew, isModify, oriWOR, oriEO, onCancel, 
                     </Grid>
                 </Stack>
                 <DialogActions sx={{ m: 1 }}>
-                    {isEdit
+                    <ScEditButton
+                        isEdit={isEdit}
+                        isModify={isModify}
+                        disabled={checkVoucherErrors(errors)}
+                        onCancel={onCancel}
+                        onClick={handleAddEO}
+                        t={t}
+                    />
+                   {/*  {isEdit
                         ? <>
                             <Button color="error" onClick={onCancel} >{t("cancel")}</Button>
                             <Button variant="contained" disabled={checkVoucherErrors(errors)} onClick={handleAddEO}>{t(isModify ? "save" : "add")}</Button>
                         </>
                         : <Button variant="contained" onClick={onCancel} >{t("back")}</Button>
-                    }
+                    } */}
                 </DialogActions>
             </Stack>
         </>

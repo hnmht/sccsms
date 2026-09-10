@@ -6,13 +6,13 @@ import {
     DialogActions,
     IconButton,
     Tooltip,
-    Button,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { CopyAddRowIcon, DeleteRowIcon } from "../../../component/PubIcon/PubIcon";
 import { cloneDeep } from "lodash";
 
 import ScInput from "../../../component/ScInput";
+import ScEditButton from "../../../component/ScEditButton/ScEditButton";
 import Loader from "../../../component/Loader/Loader";
 import { MultiSortByArr } from "../../../utils/tools";
 import { reqAddEPT, reqEditEPT, reqCheckEPTCode } from "../../../api/ept";
@@ -109,7 +109,6 @@ const EditEPT = ({ isOpen, isNew, isModify, oriEPT, onCancel, onOk }) => {
                     if (itemKey === "allowDelRow") {
                         newData.body.map(row => row.allowDelRow = value);
                     }
-                    console.log(itemKey,":", value);
                     newData[itemKey] = value;
                     break;
                 case 1:
@@ -628,14 +627,14 @@ const EditEPT = ({ isOpen, isNew, isModify, oriEPT, onCancel, onOk }) => {
                 </Grid>
             </Stack>
             <DialogActions sx={{ m: 1 }}>
-                {isEdit
-                    ? <>
-                        <Button color="error" onClick={onCancel} >{t("cancel")}</Button>
-                        <Button variant="contained" disabled={checkVoucherErrors(errors)} onClick={handleAddEPT}>{t(isModify ? "save" : "add")}</Button>
-                    </>
-                    : <Button variant="contained" onClick={onCancel} >{t("back")}</Button>
-                }
-
+                <ScEditButton
+                    isEdit={isEdit}
+                    isModify={isModify}
+                    disabled={checkVoucherErrors(errors)}
+                    onCancel={onCancel}
+                    onClick={handleAddEPT}
+                    t={t}
+                />   
             </DialogActions>
         </Stack>
         : <Loader />

@@ -14,6 +14,7 @@ import { encryptPassword } from "../../../utils/encrypt";
 import { cloneDeep } from "lodash";
 import { Divider } from "../../../component/ScMui/ScMui";
 import ScInput from "../../../component/ScInput";
+import ScEditButton from "../../../component/ScEditButton/ScEditButton";
 import { reqGetPublicKey } from "../../../api/security";
 import { reqChangePwd } from "../../../api/login";
 
@@ -138,8 +139,14 @@ const ChangePassword = ({ user, onCancel }) => {
             </DialogContent>
             <Divider />
             <DialogActions sx={{ p: 2.5 }}>
-                <Button color='error' onClick={onCancel}>{t("cancel")}</Button>
-                <Button variant='contained' disabled={checkError(errors)} onClick={handleChangePassword}>{t("edit")}</Button>
+                <ScEditButton
+                    isEdit={true}
+                    isModify={true}
+                    disabled={checkError(errors)}
+                    onCancel={onCancel}
+                    onClick={handleChangePassword}
+                    t={t}
+                />  
             </DialogActions>
         </>
     );
