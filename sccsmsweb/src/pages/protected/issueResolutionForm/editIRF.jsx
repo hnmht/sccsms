@@ -14,6 +14,7 @@ import { dayjs, EpochTime } from "../../../i18n/dayjs";
 import { cloneDeep } from "lodash";
 import { message } from "mui-message";
 import ScInput from "../../../component/ScInput";
+import ScEditButton from "../../../component/ScEditButton/ScEditButton";
 import Loader from "../../../component/Loader/Loader";
 import store from "../../../store";
 import { checkVoucherNoBodyErrors } from "../pub/pubFunction";
@@ -551,13 +552,14 @@ const EditIRF = ({ isOpen, isNew, isModify, oriEOR, oriIRF, onCancel, onOk }) =>
                 </DialogContent>
                 <Divider sx={{ my: 2 }} />
                 <DialogActions sx={{ m: 1 }}>
-                    {isEdit
-                        ? <>
-                            <Button color="error" onClick={onCancel} >{t("cancel")}</Button>
-                            <Button variant="contained" disabled={checkVoucherNoBodyErrors(errors)} onClick={handleAddIRF}>{t(isModify ? "save" : "add")}</Button>
-                        </>
-                        : <Button variant="contained" onClick={onCancel} >{t("back")}</Button>
-                    }
+                    <ScEditButton
+                        isEdit={isEdit}
+                        isModify={isModify}
+                        disabled={checkVoucherNoBodyErrors(errors)}
+                        onCancel={onCancel}
+                        onClick={handleAddIRF}
+                        t={t}
+                    />
                 </DialogActions>
             </Stack>
         </>

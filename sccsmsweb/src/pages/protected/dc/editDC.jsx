@@ -13,6 +13,7 @@ import { EpochTime } from '../../../i18n/dayjs';
 
 import { Divider } from '../../../component/ScMui/ScMui';
 import ScInput from '../../../component/ScInput';
+import ScEditButton from '../../../component/ScEditButton/ScEditButton';
 import Loader from '../../../component/Loader/Loader';
 import MoreInfo from '../../../component/MoreInfo/MoreInfo';
 
@@ -287,13 +288,14 @@ const EditDC = ({ isOpen, isNew, isModify, oriDoc, onCancel, onOk }) => {
             </DialogContent>
             <Divider />
             <DialogActions>
-                {isEdit
-                    ? <>
-                        <Button color='error' onClick={onCancel}>{t("cancel")}</Button>
-                        <Button variant='contained' disabled={checkVoucherNoBodyErrors(errors)} onClick={handleAddDoc}>{t(isModify ? "save" : "add")}</Button>
-                    </>
-                    : <Button variant="contained" onClick={onCancel} >{t("back")}</Button>
-                }
+                <ScEditButton
+                    isEdit={isEdit}
+                    isModify={isModify}
+                    disabled={checkVoucherNoBodyErrors(errors)}
+                    onCancel={onCancel}
+                    onClick={handleAddDoc}
+                    t={t}
+                />
             </DialogActions>
         </>
         : <Loader />

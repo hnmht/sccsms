@@ -17,6 +17,7 @@ import { dayjs, EpochTime } from "../../../i18n/dayjs";
 import { ScVoucherBody, ScVoucherBodyRow } from "../../../component/ScVoucher";
 import Loader from "../../../component/Loader/Loader";
 import ScInput from "../../../component/ScInput";
+import ScEditButton from "../../../component/ScEditButton/ScEditButton";
 import SelectMultiplePerson from "./selectMultiplePerson/selectultiplePerson";
 
 import store from "../../../store";
@@ -324,7 +325,7 @@ const EditTrainingRecord = ({ isOpen, isNew, isModify, oriTr, onCancel, onOk, t 
         return err;
 
     };
-    
+
     return (voucherData !== undefined
         ? <>
             <Stack component="div" id="eidtED" sx={{ overflowX: "hidden", overflowY: "hidden", p: 2 }}>
@@ -842,13 +843,14 @@ const EditTrainingRecord = ({ isOpen, isNew, isModify, oriTr, onCancel, onOk, t 
                     </Grid>
                 </Stack>
                 <DialogActions sx={{ m: 1 }}>
-                    {isEdit
-                        ? <>
-                            <Button color="error" onClick={onCancel} >{t("cancel")}</Button>
-                            <Button variant="contained" disabled={checkVoucherErrors(errors)} onClick={handleAddTR}>{t(isModify ? "save" : "add")}</Button>
-                        </>
-                        : <Button variant="contained" onClick={onCancel} >{t("back")}</Button>
-                    }
+                    <ScEditButton
+                        isEdit={isEdit}
+                        isModify={isModify}
+                        disabled={checkVoucherErrors(errors)}
+                        onCancel={onCancel}
+                        onClick={handleAddTR}
+                        t={t}
+                    />
                 </DialogActions>
             </Stack>
         </>
