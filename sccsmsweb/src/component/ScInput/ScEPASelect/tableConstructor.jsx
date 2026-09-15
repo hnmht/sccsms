@@ -36,7 +36,7 @@ export const columns = [
     { id: "riskLevel", label: "riskLevel", alignment: "center", minWidth: 60, visible: true, sortField: "riskLevel.name", sort: true, display: { type: 1, cell1: CellRiskLevel } },
     { id: "description", label: "description", alignment: "center", minWidth: 160, visible: true, sortField: "description", sort: true, display: { type: 1, cell1: CellDescription } },
     { id: "status", label: "status", alignment: "center", minWidth: 60, visible: true, sortField: "status", sort: true, display: { type: 1, cell1: cellStatus } },
-    { id: "epc", label: "epc", alignment: "center", minWidth: 60, visible: false, sortField: "itemclass.name", sort: true, display: { type: 1, cell1: CellEPCName } },
+    { id: "epc", label: "epc", alignment: "center", minWidth: 60, visible: false, sortField: "epc.name", sort: true, display: { type: 1, cell1: CellEPCName } },
     { id: "resultType", label: "resultType", alignment: "center", minWidth: 60, visible: true, sortField: "resultType.name", sort: true, display: { type: 1, cell1: CellResultType } },
     { id: "udc", label: "udc", alignment: "center", minWidth: 60, visible: false, sortField: "udc.name", sort: true, display: { type: 1, cell1: CellUDCName } },
     { id: "defaultValueDisp", label: "defaultValueDisp", alignment: "center", minWidth: 60, visible: false, sortField: "defaultValueDisp", sort: true, display: { type: 0, cell1: null } },

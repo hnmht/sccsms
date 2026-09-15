@@ -120,9 +120,7 @@ const OperateArea = (props) => {
     // Actions after keyword input value change
     const keyWordInputChange = (event) => {
         setKeyword(event.target.value);
-        if (event.target.value === "") {
-            getKeyWordAction("");
-        }
+        getKeyWordAction(event.target.value)        
     };
 
     // Actions after click the clear search keyword button

@@ -14,13 +14,13 @@ import { spacing } from "@mui/system";
 import styled from "@emotion/styled";
 import { utils, writeFileXLSX } from "xlsx";
 import { useReactToPrint } from "react-to-print";
-import { matchSorter } from "match-sorter";
+import { matchSorter, rankings } from "match-sorter";
 import { cloneDeep } from "lodash";
 import { useTranslation } from "react-i18next";
 
 import OperateArea from "../DocList/OperateArea";
 import { getOrderBy, getSortColumns, getColumnsKey, excelColumns, excelRows } from "../DocList/tools";
-import { MultiSortByArr} from "../../utils/tools";
+import { MultiSortByArr } from "../../utils/tools";
 import { DateTimeFormat } from "../../i18n/dayjs";
 
 const Paper = styled(MuiPaper)(spacing);
@@ -123,7 +123,7 @@ function DocTable({
 
     // Action after Search Keyword input
     const handleGetKeyWord = (word) => {
-        const searchedRows = matchSorter(rows, word, { keys: getColumnsKey(columns) });
+        const searchedRows = matchSorter(rows, word, { keys: getColumnsKey(columns), threshold: rankings.CONTAINS });
         setCurrentRows(searchedRows);
     };
 
@@ -138,10 +138,10 @@ function DocTable({
                 newSelectedRows = currentRows;
             } else {
                 newSelectedRows = currentRows.filter(item => {
-                    const status = item.status ? item.status :0;
+                    const status = item.status ? item.status : 0;
                     return status === 0;
                 });
-            }            
+            }
         }
         setSelectedRows(newSelectedRows);
         selectItem(newSelectedRows)
