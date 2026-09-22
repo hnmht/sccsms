@@ -35,13 +35,13 @@ const EPAPicker = ({ clickItemAction, doubleClickItemAction, cancelClickAction, 
         setEpcs(localEPCs);
     };
     // Refresh Execution Project Category 
-    const handleRefreshEics = async () => {
+    const handleRefreshEpcs = async () => {
         // Request latest EPC list for front-end cache
         await InitDocCache(EPCName);
         // Get EPC list from front-end cache
-        let newEics = await GetLocalCache(EPCName);
+        let newEpcs = await GetLocalCache(EPCName);
         // Refresh
-        setEpcs(newEics);
+        setEpcs(newEpcs);
     };
     // Refresh Execution Project Archaive 
     const handleRefreshEpas = async () => {
@@ -91,7 +91,7 @@ const EPAPicker = ({ clickItemAction, doubleClickItemAction, cancelClickAction, 
                             >
                                 {t("chooseCategory")}
                                 <Tooltip title={t("refresh")} placement="top">
-                                    <IconButton onClick={handleRefreshEics}>
+                                    <IconButton onClick={handleRefreshEpcs}>
                                         <RefreshIcon color="primary" />
                                     </IconButton>
                                 </Tooltip>

@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
     Stack,
     IconButton,
@@ -60,6 +60,8 @@ const OperateArea = (props) => {
         dispIncludeDisabled = false,
         includeDisabled = true,
         includeDisabledAction = () => { },
+
+        filterText = "",
     } = props;
     const { t } = useTranslation();
     // Popover related
@@ -112,7 +114,7 @@ const OperateArea = (props) => {
     };
 
     // Search related
-    const [keyword, setKeyword] = useState("");
+    const [keyword, setKeyword] = useState(filterText);     
     // Actions after click the start search button
     const handleSearch = () => {
         getKeyWordAction(keyword);

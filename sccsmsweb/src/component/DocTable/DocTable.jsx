@@ -64,6 +64,8 @@ function DocTable({
     // Display include disabled checkbox
     dispIncludeDisabled = true,
     disabledStatus = 1,
+    // Keyword filtering
+    filterText = "",
 }) {
     const { t } = useTranslation();
     const list = useRef(null);
@@ -212,6 +214,8 @@ function DocTable({
                 dispIncludeDisabled={dispIncludeDisabled}
                 includeDisabled={includeDisabled}
                 includeDisabledAction={() => setIncludeDisabled(!includeDisabled)}
+
+                filterText={filterText}
             />
             <TableContainer ref={list} sx={{ height: tableContainerHeight, width: "100%", px: 1 }}>
                 <Table stickyHeader aria-label="sticky table">
